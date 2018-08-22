@@ -1,2 +1,3 @@
-# akka.net-streams-sample
-Simple Akka Streams sample
+# Akka Streams sample
+
+![Stream diagram](stream.png "Stream diagram")
