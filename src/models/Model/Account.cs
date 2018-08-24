@@ -2,7 +2,7 @@
 
 namespace models.Model
 {
-    public class Account
+    public class Account : IIdentity
     {
         public int Id { get; set; }
         public string Name { get; set; }

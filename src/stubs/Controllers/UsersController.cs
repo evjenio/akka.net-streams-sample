@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using models;
 using models.Model;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,7 +16,7 @@ namespace stubs.Controllers
             {
                 Id = n,
                 AuthTypes = new[] {$"bearer{n}", $"password{n}"}
-            }).ToArray();
+            }).Shuffle().ToArray();
         }
 
         [HttpGet("properties")]
@@ -26,7 +27,7 @@ namespace stubs.Controllers
                 Id = n,
                 Email = $"User{n}@example.com",
                 Phone = n.GetHashCode().ToString()
-            }).ToArray();
+            }).Shuffle().ToArray();
         }
 
         [HttpGet("users")]
@@ -36,7 +37,7 @@ namespace stubs.Controllers
             {
                 Id = n,
                 Name = $"User{n}"
-            }).ToArray();
+            }).Shuffle().ToArray();
         }
     }
 }
